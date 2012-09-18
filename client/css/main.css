@@ -1,0 +1,28 @@
+body {
+   background-image:url("images/transparent.gif");
+   background-color:#CCC;
+   overflow:hidden;
+   margin:0px;
+   padding:0px;
+}
+
+.kineticjs-content {
+    background-color:#FFF;
+}
+.moveCursor {
+    cursor:move;
+}
+.moduleNotification {
+    position:absolute;
+    top:10px;
+    left:10px;
+    color:#FFF;
+    background-color:#000;
+    padding:5px 10px;
+}
+.userColorIcon {
+    margin:5px 5px 5px 0px;
+    float:left;
+    width:10px;
+    height:10px;
+}

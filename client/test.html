@@ -1,0 +1,50 @@
+<head>
+    <script src="http://www.html5canvastutorials.com/libraries/kinetic-v3.9.0.js">
+    </script>
+    <script>
+        window.onload = function() {
+            var stage = new Kinetic.Stage({
+                container: "container",
+                width: 578,
+                height: 200
+            });
+            var layer = new Kinetic.Layer();
+            var rect = new Kinetic.Rect({
+                x: 100,
+                y: 100,
+                width: 50,
+                height: 50,
+                fill: 'green',
+                stroke: 'black',
+                strokeWidth: 2,
+                alpha: 0.2
+            });
+            var rect2 = new Kinetic.Rect({
+                x: 200,
+                y: 100,
+                width: 50,
+                height: 50,
+                fill: 'blue',
+                stroke: 'black',
+                strokeWidth: 2,
+                alpha: 0.2,
+                draggable:true
+            });
+            rect2.on("dragend",function(){
+                rect.transitionTo({
+                    x: rect2.x-100,
+                    y: rect2.y,
+                    duration:.5
+                });
+            });
+ 
+            layer.add(rect);
+            layer.add(rect2);
+            stage.add(layer);
+        };
+    </script>
+</head>
+<body onmousedown="return false;">
+    <div id="container">
+    </div>
+</body>
